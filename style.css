@@ -46,9 +46,13 @@ header{
     flex-direction: row;
     justify-content: start;
     align-items: start;
-    gap: 10px;
+    gap: 20px;
     padding-right: 10px;
     margin-top: 10px;
+}
+
+.nav-bar ul{
+    font-family: Seymour One;
 }
 
 header #nav-container .nav-bar .nav-list{
@@ -69,7 +73,7 @@ header #nav-container .nav-bar .nav-list{
 }
 
 #log-in:hover{
-    background-color: rgb(74, 193, 74);
+    background-color: rgb(80, 209, 80);
 }
 
 #log-in a{
@@ -84,6 +88,7 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     color: aliceblue;
     font-size: 30px;
     font-family: Seymour One, sans-serif;
+    text-decoration: none;
 }
 
 label{
@@ -94,7 +99,7 @@ label{
     display: none;
 }
 
-@media(max-width:700px){
+@media(max-width:768px){
     #nav-container{
         position: fixed;
         height: 100%;
@@ -102,6 +107,8 @@ label{
         right: -100%;
         transition: 1s;
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.4);
+        border:solid, rgb(78, 78, 78), 0px;
+        border-left-width:5px;
     }
     header #nav-container .nav-bar .nav-list{
         flex-direction: column;
@@ -127,4 +134,25 @@ label{
         right: 0;
         display: inline;
     }
+    
+}
+
+#log-in-container{
+    width: auto;
+    background-color: rgba(142, 141, 139, 0.4); 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%); 
+    padding: 10px; 
+    backdrop-filter: blur(2px); 
+    border-radius: 5px; 
+    border-style:solid; 
+    border-color: rgb(117, 111, 111);
+}
+
+#log-in-container form{
+    flex-direction: column;
+    display: flex;
+    gap: 5px;
 }
