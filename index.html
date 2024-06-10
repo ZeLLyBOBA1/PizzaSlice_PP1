@@ -1,29 +1,74 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap" rel="stylesheet">
     </head>
     <body>
-        <nav>
-            <div class="nav-container">
-                <a class="logo" href="index.html">PizzaSlice</a>
-                <ul>
-                    <li>
-                        <a class="nav-link" href="">Gallery</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="">Restaurant Info</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="">Menu</a>
-                    </li>
-                    <li id="log-in-button">
-                        <a href="">Log In</a>
-                    </li>
-                </ul>          
-            </div> 
-        </nav>
-        <section>
+        
+        <!--Srart of the Navigation Bar-->
+        <header>
+                
+            <a class="logo">PizzaSlice</a>
+                
+            <label for="checkbox" id="open-icon"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></label>
+            <input type="checkbox" id="checkbox">
+                
+            <div id="nav-container">
+                
+                <nav class="nav-bar">
+                    
+                    <ul class="nav-list">
+                        <li>
+                            <label for="checkbox" id="close-icon"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></label>
+                        </li>
+                        <li>
+                            <a class="text-decoration" href="#restaurant-info">About Us</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration" href="#menu">Menu</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration" href="#gallery">Gallery</a>
+                        </li>
+                        <li id="log-in">
+                            <a href="log-in.html">Log In</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+            
+            
+        <!--End of the Navigation Bar-->
+
+        <section id="restaurant-info">
+            <div style="background-color: aqua; width: 100px; height: 500px;">
+                <h1>Info</h1>
+            </div>
         </section>
+
+        <section id="menu">
+            <div style="background-color: aqua; width: 100px; height: 1000px;">
+                <h1>Menu</h1>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div style="background-color: aqua; width: 100px; height: 1000px;">
+                <h1>Gallery</h1>
+                
+            </div>
+        </section>
+
+        <footer>
+            
+        </footer>
+        <script src="script.js"></script>
     </body>
 </html>

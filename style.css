@@ -1,111 +1,130 @@
-/* 
-----------------------------------------------------|
-Sets margin and padding equal to 0 for every element| ↓↓↓
-----------------------------------------------------|
+/*
+--------------------------------------------|
+Removes margin and padding for every element| ↓↓↓
+--------------------------------------------|
 */
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+/*
+--------------------------------------------------|
+Removes horizontal scrollbar and add smooth scroll| ↓↓↓
+--------------------------------------------------|
+*/
 body{
-    overflow-x: hidden  ;
+    overflow-x: hidden;
 }
 
-/* 
-========================================================|
-Navbar settings                                         | ↓↓↓
-========================================================| 
-*/
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding);
+}
 
 /*
--------------|
-Sticky navbar| ↓↓↓
--------------|
+============================================================================|
+Header - Navbar styling                                                     |    
+============================================================================|
 */
-nav{
+
+
+header{
     position: sticky;
     top: 0px;
-}
-
-/* 
-----------------|
-Navbar container| ↓↓↓
-----------------|
-*/              
-.nav-container
-{
-    background-color: rgb(112, 95, 95);
     width: 100%;
-    box-shadow: black 0px 10px 30px;  
-    color: aliceblue;
     display: flex;
     justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    z-index: 999;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* 
------------------|
-Logo text styling| ↓↓↓
------------------| 
-*/
-nav .logo{
-    margin-left: 10px;
-    font-size: 40px;
-    color: aliceblue;
-    text-decoration: none;
-}
-
-/* 
--------------------------|
-Styling for unsorted list| ↓↓↓
--------------------------|
-*/
-.nav-container ul{
+.nav-bar ul{
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+}
+
+header #nav-container .nav-bar .nav-list{
+    justify-content: center;
     align-items: center;
-    gap: 30px;
-    margin-right: 20px;
 }
 
-/*
-------------------------------------------------------------------------|
-Clears underline for navbar links except Log in button and changes color| ↓↓↓
-------------------------------------------------------------------------|
-*/
-.nav-container .nav-link{
+.nav-bar ul a{
     text-decoration: none;
+    color:aliceblue;
+}
+
+#log-in{
+    background-color: rgb(58, 155, 58);
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 5px; 
+}
+
+#log-in:hover{
+    background-color: rgb(74, 193, 74);
+}
+
+#log-in a{
+    color: black;
+}
+
+header #nav-container .nav-bar .nav-list .text-decoration:hover{
+    text-decoration: underline;
+}
+
+.logo{
     color: aliceblue;
+    font-size: 30px;
+    font-family: Seymour One, sans-serif;
 }
 
-/* 
-----------------------------------------|
-Adds underline on hover for navbar links| ↓↓↓
-----------------------------------------|
-*/
-.nav-container .nav-link:hover{
-text-decoration: underline;
+label{
+    display: none;
 }
 
-/* 
----------------------|
-Log in button styling| ↓↓↓
----------------------|
-*/
-#log-in-button a{
-    background-color: rgb(14, 153, 86);
-    color: rgb(0, 0, 0);
-    padding: 5px;
-    border-radius: 10px;
-    text-decoration: none;
+#checkbox{
+    display: none;
 }
 
-/*
-----------------------------------|
-Changes Log In background on hover| ↓↓↓
-----------------------------------|
-*/
-#log-in-button:hover a{
-    background-color: rgb(22, 185, 106);
-}
+@media(max-width:700px){
+    #nav-container{
+        position: fixed;
+        height: 100%;
+        background-color: black;
+        right: -100%;
+        transition: 1s;
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.4);
+    }
+    header #nav-container .nav-bar .nav-list{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        margin: 10px;
+        margin-top: 5px;
+        
+    }
 
+    header #nav-container .nav-bar{
+        display: flex;
+    }
+
+    #open-icon{
+        display: inline;
+        margin-top: 3px;
+    }
+    #close-icon{
+        display: inline;
+    }
+    #checkbox:checked ~ #nav-container{
+        right: 0;
+        display: inline;
+    }
+}
