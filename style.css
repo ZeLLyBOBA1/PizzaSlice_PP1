@@ -15,6 +15,7 @@ Removes horizontal scrollbar and add smooth scroll| ↓↓↓
 */
 body{
     overflow-x: hidden;
+    overscroll-behavior: contain;
 }
 
 html{
@@ -91,7 +92,7 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     text-decoration: none;
 }
 
-label{
+#open-icon, #close-icon{
     display: none;
 }
 
@@ -107,7 +108,7 @@ label{
         right: -100%;
         transition: 1s;
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.4);
-        border:solid, rgb(78, 78, 78), 0px;
+        border:solid, rgb(54, 54, 54), 0px;
         border-left-width:5px;
     }
     header #nav-container .nav-bar .nav-list{
@@ -132,27 +133,148 @@ label{
     }
     #checkbox:checked ~ #nav-container{
         right: 0;
-        display: inline;
     }
     
 }
 
 #log-in-container{
     width: auto;
-    background-color: rgba(142, 141, 139, 0.4); 
+    background-color: rgb(255, 255, 255); 
     position: fixed; 
     top: 50%; 
     left: 50%; 
     transform: translate(-50%,-50%); 
     padding: 10px; 
     backdrop-filter: blur(2px); 
-    border-radius: 5px; 
+    border-radius: 10px; 
     border-style:solid; 
-    border-color: rgb(117, 111, 111);
+    border-color: rgb(117, 111, 111); 
+    padding-top: 0px;
+    overflow: auto;
+    overscroll-behavior: contain;
+
+    transition: 0.5s;
+    scale: 0;
+    top: -60px;
+}
+
+#log-in-first-section{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+#log-in-close-icon{
+    margin-left: -10px;
+}
+
+#log-in-text{
+    font-size: 15px; 
+    font-family: Seymour One; 
+    color: rgba(142, 141, 139, 0.4);
+}
+
+#log-in-email-section{
+    background-color: rgb(248, 242, 242); 
+    display: flex; 
+    flex-direction: column; 
+    padding: 5px; 
+    border-radius: 10px;
+}
+
+#email-field-label{
+    color: grey; 
+    font-size: 10px;
+}
+
+#email-field{
+    border-radius: 5px; 
+    background-color: transparent; 
+    border: transparent; 
+    outline: none;
+}
+
+#log-in-password-section{
+    background-color: rgb(248, 242, 242); 
+    display: flex; 
+    flex-direction: column; 
+    padding: 5px; 
+    border-radius: 10px;
+}
+
+#password-field-label{
+    color: grey; 
+    font-size: 10px;
+}
+
+#password-field{
+    border-radius: 5px; 
+    background-color: transparent; 
+    border: transparent; 
+    outline: none;
+}
+
+#log-in-sub-section{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+#remember-me-span{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+#remember-me-label{
+    color: grey;
+    font-size: 10px;
+}
+
+#create-account-a{
+    color: grey;
+    font-size: 10px;
+}
+
+#create-account-a:hover{
+    text-decoration: none;
+}
+
+#log-in-button{
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#log-in-overlay{
+    display: none;
+    background-color: rgba(0, 0, 0, 0);
+    width: 200%; 
+    height: 200%; 
+    position: fixed; 
+    backdrop-filter: blur(0px);
+    transition: 0.5s;
 }
 
 #log-in-container form{
     flex-direction: column;
     display: flex;
     gap: 5px;
+}
+
+#log-in-checkbox{
+    display: none;
+}
+body #log-in-checkbox:checked ~ header #nav-container {
+    display: none;
+}
+
+#log-in-checkbox:checked ~ #log-in-container{
+    top: 50%;
+    scale: 1;
+}
+
+#log-in-checkbox:checked ~ #log-in-overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: inline;
 }

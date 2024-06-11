@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>PizzaSlice</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
@@ -14,15 +15,39 @@
     <body>
         
         <!--Srart of the Navigation Bar-->
-        <div id="log-in-container" style="width: auto;background-color: rgba(142, 141, 139, 0.4); position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); padding: 10px; backdrop-filter: blur(2px); border-radius: 5px; border-style:solid; border-color: rgb(117, 111, 111);">
+        <input type="checkbox" id="log-in-checkbox">
+        <div id="log-in-overlay"></div>
+
+        <div id="log-in-container">
             <form>
-                <input required id="email" type="email" placeholder="example@mail.com" style="border-radius: 5px;">
-                <input required id="user-password" type="password" autocomplete="new-password" placeholder="password" style="border-radius: 5px;">
-                <button type="submit">Login</button>    
+                <div id="log-in-first-section">
+                    <label for="log-in-checkbox" id="log-in-close-icon"><svg fill="grey" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></label>
+                    <a id="log-in-text">Login</a>
+                </div>
+
+                <div id="log-in-email-section">
+                    <label for="email-field" id="email-field-label">E-mail*</label>
+                    <input required id="email-field" type="email" placeholder="example@mail.com">
+                </div>
+
+                <div id="log-in-password-section">
+                    <label for="password-field" id="password-field-label">Password*</label>
+                    <input required id="password-field" type="password" autocomplete="new-password" placeholder="password">
+                </div>
+
+                <div id="log-in-sub-section">
+                    <span id="remember-me-span">
+                        <input id="remember-me" type="checkbox">
+                        <label id="remember-me-label" for="remember-me">Remember me</label>
+                    </span>
+                    <a id="create-account-a" href="">Create account</a>
+                </div>
+
+                <button id="log-in-button" type="submit">Login</button>    
             </form>
         </div>
+
         <header>
-                
             <a class="logo" href="#hero">PizzaSlice</a>
                 
             <label for="checkbox" id="open-icon"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></label>
@@ -47,9 +72,11 @@
                         <li>
                             <a class="text-decoration" href="#gallery">Gallery</a>
                         </li>
+                        <label for="log-in-checkbox" id="log-in-label">
                         <li id="log-in">
-                            <a href="">Log In</a>
+                            <a id="log-in">Log In</a>
                         </li>
+                        </label>
                     </ul>
                 </nav>
             </div>
@@ -57,7 +84,8 @@
         </header>
         <!--End of the Navigation Bar-->
         <section id="hero" style="background-color: rgb(232, 232, 232); width: 100%; height: 500px;">
-            Hero
+            
+            
         </section>
 
         <section id="restaurant-info">
