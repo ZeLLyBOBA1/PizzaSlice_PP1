@@ -53,7 +53,7 @@ header{
 }
 
 .nav-bar ul{
-    font-family: Seymour One;
+    font-family:monospace;
 }
 
 header #nav-container .nav-bar .nav-list{
@@ -87,7 +87,7 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     color: rgb(198, 198, 198);
     font-size: 30px;
     margin-left: 10px;
-    font-family: Seymour One, sans-serif;
+    font-family:cursive;
     text-decoration: none;
 }
 
@@ -175,7 +175,11 @@ pop up container settings
 #pop-up-checkbox{
     display: none;
 }
-body #pop-up-checkbox:checked ~ header #nav-container {
+body #pop-up-checkbox:checked ~ header #nav-container{
+    display: none;
+}
+
+#pop-up-checkbox:checked ~  header .logo{
     display: none;
 }
 
@@ -368,20 +372,80 @@ Hero Section styling                                                        |
 */
 
 #hero{
-   /* height: 80vh; 
-   display: flex;
-   justify-content: space-around;
-   align-items: center; */
-   background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url(assets/PizzaSlice-Render1.png);
-   height: 70vh;
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-attachment: fixed;
-   background-position: center;
+    padding-left: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-image: linear-gradient(to right, rgba(0,0,0,0.9),rgba(0,0,0,0.6)), url(assets/PizzaSlice-Render1.png);
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
+#hero-section-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 100px;
+}
 
+#slogan{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: start; 
+    row-gap: 4px;
+}
 
+#slogan a{
+    font-size: 30px;
+    font-family:cursive;
+}
 
+#slogan1{
+    background-color: rgb(197, 197, 197); 
+    border-radius: 0px 10px 0px 10px;
+}
 
+#slogan2{
+    background-color: rgb(101, 101, 101); 
+    border-radius: 10px; 
+    margin-left: 40px;
+}
+
+#slogan3{
+   background-color: rgb(197, 197, 197); 
+   border-radius: 10px 0px 10px 0px; 
+   margin-left:20px;
+}
+
+#hero-text-container{
+    margin-top: 30px; 
+    background-color: rgba(240, 248, 255, 0.1); 
+    backdrop-filter: blur(5px); 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    padding: 0; 
+    border-radius: 5px;
+    font-family: monospace;
+    margin-left: 50px;
+}
+
+#order-now-button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(20, 206, 66, 0.5); 
+    border-radius: 5px;
+    align-self: flex-end;
+    text-decoration: none;
+    color: black;
+}
+
+#order-now-button:hover{
+    background-color: rgba(20, 206, 66, 0.7);
+}
 
