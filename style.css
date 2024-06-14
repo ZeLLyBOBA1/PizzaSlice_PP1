@@ -63,22 +63,20 @@ header #nav-container .nav-bar .nav-list{
 
 .nav-bar ul a{
     text-decoration: none;
-    color:aliceblue;
+    color:rgb(190, 190, 190);
 }
 
 #log-in{
-    background-color: rgb(58, 155, 58);
-    padding-left: 3px;
-    padding-right: 3px;
+    background-color: rgb(180, 180, 180);                                                                                                                                       
     border-radius: 5px; 
 }
 
 #log-in:hover{
-    background-color: rgb(80, 209, 80);
+    background-color: rgb(240, 240, 240);
 }
 
 #log-in a{
-    color: black;
+    color: rgb(43, 43, 43);
 }
 
 header #nav-container .nav-bar .nav-list .text-decoration:hover{
@@ -86,8 +84,9 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
 }
 
 .logo{
-    color: aliceblue;
+    color: rgb(198, 198, 198);
     font-size: 30px;
+    margin-left: 10px;
     font-family: Seymour One, sans-serif;
     text-decoration: none;
 }
@@ -96,7 +95,7 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     display: none;
 }
 
-#checkbox{
+#sidebar-checkbox{
     display: none;
 }
 
@@ -104,7 +103,7 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     #nav-container{
         position: fixed;
         height: 100%;
-        background-color: black;
+        background-color: rgb(117, 95, 95);
         right: -100%;
         transition: 1s;
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.4);
@@ -123,7 +122,6 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     header #nav-container .nav-bar{
         display: flex;
     }
-
     #open-icon{
         display: inline;
         margin-top: 3px;
@@ -131,13 +129,23 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     #close-icon{
         display: inline;
     }
-    #checkbox:checked ~ #nav-container{
+    #sidebar-checkbox:checked ~ #nav-container{
         right: 0;
     }
-    
 }
 
-#log-in-container{
+/*
+--------------------------------------------------|
+Popup container settings                          | ↓↓↓
+--------------------------------------------------|
+*/
+
+/*
+-------------------------
+pop up container settings
+-------------------------
+*/
+.pop-up-container{
     width: auto;
     background-color: rgb(255, 255, 255); 
     position: fixed; 
@@ -158,23 +166,70 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     top: -60px;
 }
 
-#log-in-first-section{
+.pop-up-container form{
+    flex-direction: column;
+    display: flex;
+    gap: 5px;
+}
+
+#pop-up-checkbox{
+    display: none;
+}
+body #pop-up-checkbox:checked ~ header #nav-container {
+    display: none;
+}
+
+#pop-up-checkbox:checked ~ .pop-up-container{
+    top: 50%;
+    scale: 1;
+}
+
+#pop-up-checkbox:checked ~ label .overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: inline;
+}
+
+label .overlay{
+    display: none;
+    background-color: rgba(0, 0, 0, 0);
+    width: 200%; 
+    height: 200%; 
+    position: fixed; 
+    backdrop-filter: blur(0px);
+    transition: 0.5s;
+}
+
+/*
+---------------------
+pop up header section
+---------------------
+*/
+.pop-up-header-section{
     display: flex; 
     justify-content: space-between; 
     align-items: center;
 }
 
-#log-in-close-icon{
+/*pop up close icon*/
+.pop-up-close-icon{
     margin-left: -10px;
 }
 
-#log-in-text{
+/*pop up header text*/
+.pop-up-header-text{
     font-size: 15px; 
     font-family: Seymour One; 
     color: rgba(142, 141, 139, 0.4);
 }
 
-#log-in-email-section{
+
+/*
+--------------------
+pop up email section
+--------------------
+*/
+.pop-up-email-section{
     background-color: rgb(248, 242, 242); 
     display: flex; 
     flex-direction: column; 
@@ -182,19 +237,24 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     border-radius: 10px;
 }
 
-#email-field-label{
+.email-field-label{
     color: grey; 
     font-size: 10px;
 }
 
-#email-field{
+.email-field{
     border-radius: 5px; 
     background-color: transparent; 
     border: transparent; 
     outline: none;
 }
 
-#log-in-password-section{
+/*
+-----------------------
+pop up password section
+-----------------------
+*/
+.pop-up-password-section{
     background-color: rgb(248, 242, 242); 
     display: flex; 
     flex-direction: column; 
@@ -202,22 +262,27 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     border-radius: 10px;
 }
 
-#password-field-label{
+.password-field-label{
     color: grey; 
     font-size: 10px;
 }
 
-#password-field{
+.password-field{
     border-radius: 5px; 
     background-color: transparent; 
     border: transparent; 
     outline: none;
 }
 
-#log-in-sub-section{
+/*
+------------------
+pop up sub section
+------------------
+*/
+.pop-up-sub-section{
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    align-items: center;
 }
 
 #remember-me-span{
@@ -231,50 +296,95 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     font-size: 10px;
 }
 
-#create-account-a{
-    color: grey;
-    font-size: 10px;
-}
-
-#create-account-a:hover{
-    text-decoration: none;
-}
-
-#log-in-button{
+/*
+---------------------
+submit button section
+---------------------
+*/
+.submit-button{
     margin-top: 10px;
     border-radius: 5px;
 }
 
-#log-in-overlay{
-    display: none;
-    background-color: rgba(0, 0, 0, 0);
-    width: 200%; 
-    height: 200%; 
-    position: fixed; 
-    backdrop-filter: blur(0px);
-    transition: 0.5s;
-}
 
-#log-in-container form{
-    flex-direction: column;
+/*
+------------------------
+change container section
+------------------------
+*/
+.change-container-section{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
 }
 
-#log-in-checkbox{
-    display: none;
-}
-body #log-in-checkbox:checked ~ header #nav-container {
+#change-container-checkbox{
     display: none;
 }
 
-#log-in-checkbox:checked ~ #log-in-container{
-    top: 50%;
-    scale: 1;
+.change-container-text{
+    font-size: 10px;
 }
 
-#log-in-checkbox:checked ~ #log-in-overlay{
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    display: inline;
+#change-container-a{
+    display: flex;
+    justify-content: center;
+    color: grey;
+    font-size: 10px;
+    text-decoration: underline;
 }
+
+#change-container-a:hover{
+    text-decoration: none;
+}
+
+
+/*
+---------------------
+container transitions
+---------------------
+*/
+
+#register-container{
+    left: -50%;
+}
+
+#change-container-checkbox:checked ~ #register-container{
+    left: 50%;
+}
+
+#change-container-checkbox:checked ~ #log-in-container{
+    left: 150%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+--------------------------------------------------|
+Register container settings                       | ↓↓↓
+--------------------------------------------------|
+*/
+
+
+
