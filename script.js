@@ -5,3 +5,14 @@ console.log(navigationHeight);
 document.documentElement.style.setProperty('--scroll-padding', navigationHeight + "px");
 
 
+let popUpLabel = document.getElementById("pop-up-label");
+let sidebarCheckbox = document.getElementById("sidebar-checkbox");
+
+function closeSidebar(event){
+    sidebarCheckbox.checked = false;
+}
+
+popUpLabel.addEventListener("click", closeSidebar)
+    
+
+

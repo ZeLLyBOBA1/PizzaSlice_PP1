@@ -87,8 +87,9 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     color: rgb(198, 198, 198);
     font-size: 30px;
     margin-left: 10px;
-    font-family:cursive;
+    font-family:LXG WenKai TC;
     text-decoration: none;
+    z-index: 999;
 }
 
 #open-icon, #close-icon{
@@ -132,6 +133,23 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     #sidebar-checkbox:checked ~ #nav-container{
         right: 0;
     }
+
+    body header #sidebar-overlay-label{
+        display: none;
+        background-color: rgba(0, 0, 0, 0);
+        width: 200%; 
+        height: 200%; 
+        position: fixed; 
+        transition: 0.5s;
+    }
+
+    #sidebar-checkbox:checked ~ #sidebar-overlay-label{
+        display: inline;
+    }  
+    
+    #pop-up-checkbox:checked ~ #sidebar-checkbox:checked{
+        
+    }
 }
 
 /*
@@ -160,6 +178,7 @@ pop up container settings
     padding-top: 0px;
     overflow: auto;
     overscroll-behavior: contain;
+    z-index: 3;
 
     transition: 0.5s;
     scale: 0;
@@ -183,6 +202,10 @@ body #pop-up-checkbox:checked ~ header #nav-container{
     display: none;
 }
 
+#pop-up-checkbox:checked ~ header #open-icon{
+    display: none;
+}
+
 #pop-up-checkbox:checked ~ .pop-up-container{
     top: 50%;
     scale: 1;
@@ -192,6 +215,7 @@ body #pop-up-checkbox:checked ~ header #nav-container{
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     display: inline;
+    z-index: 1;
 }
 
 label .overlay{
@@ -201,7 +225,6 @@ label .overlay{
     height: 200%; 
     position: fixed; 
     backdrop-filter: blur(0px);
-    transition: 0.5s;
 }
 
 /*
@@ -384,6 +407,7 @@ Hero Section styling                                                        |
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    overflow: hidden;
 }
 
 #hero-section-container{
@@ -449,3 +473,27 @@ Hero Section styling                                                        |
     background-color: rgba(20, 206, 66, 0.7);
 }
 
+
+#typewriter{
+    animation: 1s infinite steps(1) blink;
+}
+@keyframes blink{
+    0%, 100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+
+@media(max-width:768px){
+    #hero-section-container{
+        padding: 0;
+    }
+    #slogan{
+        justify-content: flex-start;
+    }
+    #hero-text-container{
+        margin: 0;
+    }
+}
