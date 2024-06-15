@@ -21,6 +21,7 @@ body{
 html{
     scroll-behavior: smooth;
     scroll-padding-top: var(--scroll-padding);
+    scrollbar-width: none;
 }
 
 /*
@@ -67,12 +68,13 @@ header #nav-container .nav-bar .nav-list{
 }
 
 #log-in{
-    background-color: rgb(180, 180, 180);                                                                                                                                       
+    background-color: rgb(190, 190, 190);                                                                                                                                       
     border-radius: 5px; 
 }
 
 #log-in:hover{
     background-color: rgb(240, 240, 240);
+    cursor: pointer;
 }
 
 #log-in a{
@@ -84,7 +86,7 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
 }
 
 .logo{
-    color: rgb(198, 198, 198);
+    color: rgb(190, 190, 190);
     font-size: 30px;
     margin-left: 10px;
     font-family:LXG WenKai TC;
@@ -98,6 +100,23 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
 
 #sidebar-checkbox{
     display: none;
+}
+
+#scroll-watcher{
+    background-color: rgba(190, 190, 190, 0.5); 
+    position:absolute; 
+    bottom: 0; 
+    left: 0; 
+    height: 2px; 
+    width: 100%;
+    transform-origin: left;
+    scale: 0 1;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher{
+    to {scale: 1 1; }
 }
 
 @media(max-width:768px){
@@ -147,9 +166,6 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
         display: inline;
     }  
     
-    #pop-up-checkbox:checked ~ #sidebar-checkbox:checked{
-        
-    }
 }
 
 /*
@@ -472,7 +488,6 @@ Hero Section styling                                                        |
 #order-now-button:hover{
     background-color: rgba(20, 206, 66, 0.7);
 }
-
 
 #typewriter{
     animation: 1s infinite steps(1) blink;
