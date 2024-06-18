@@ -753,8 +753,9 @@ Gallery Section styling                                                     |
     background-color: rgb(210, 210, 210);
     width: 350px;
     height: 180px;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 20px;
     transition: 0.2s;
+    display: flex;
 }
 
 .menu-item-container:hover{
@@ -766,13 +767,49 @@ Gallery Section styling                                                     |
     width: 50%;
     height: 100%;
     border-radius: 20px 0 0 20px;
-    background-image:url(assets/578e9cf9647e1012bebcc197fa44af1a.jpg);
     background-size: cover;
     background-position: center;
     border-style:solid;
-    border-width:0 5px 0 0;
+    border-width:0 0px 0 0;
     box-shadow: 5px 0 10px;
     border-color: rgb(70, 70, 70);
+}
+
+.menu-item-container-info{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+}
+.menu-item-container-info h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-align: start;
+    font-weight: bold;
+    border-style: solid;
+    border-color: grey;
+    border-width: 0 0 2px 0;
+}
+.menu-item-container-info p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.menu-item-container-info label{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 0 2px 0 2px;
+    border-radius: 5px;
+    background-color: rgb(77, 149, 82);
+}
+
+.menu-item-container-info a:hover{
+    cursor: pointer;
 }
 
 .menu-main-subsection{
