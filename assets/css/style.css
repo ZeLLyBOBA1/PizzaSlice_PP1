@@ -417,7 +417,7 @@ Hero Section styling                                                        |
     justify-content: center;
     align-items: center;
 
-    background-image: linear-gradient(to right, rgba(0,0,0,0.9),rgba(0,0,0,0.6)), url(/assets/images/heroImage.png);
+    
     height: 70vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -560,7 +560,6 @@ Info Section styling                                                        |
 }
 
 #info-section-image-container{
-    background-image: url(/assets/images/infoImage.jpg); 
     width: 300px; 
     height: 500px; 
     background-repeat: no-repeat; 
@@ -1074,31 +1073,26 @@ Gallery Section styling                                                     |
 }
 
 #image1{
-    background-image: url(assets/images/image1.jpg);
     height:245px;
     border-radius: 20px;
 }
 
 #image2{
-    background-image: url(/assets/images/image2.jpg);
     height:245px; 
     border-radius: 20px;
 }
 
 #image3{
-    background-image: url(/assets/images/image3.jpg);
     height: 500px;
     border-radius: 20px;
 }
 
 #image4{
-    background-image: url(/assets/images/image4.jpg);
     height:245px;
     border-radius: 20px;
 }
 
 #image5{
-    background-image: url(/assets/images/image5.jpg);
     height:245px;
     border-radius: 20px;
 }
