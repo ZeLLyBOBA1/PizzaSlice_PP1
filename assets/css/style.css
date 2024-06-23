@@ -1074,7 +1074,7 @@ Gallery Section styling                                                     |
 }
 
 #image1{
-    background-image: url(/assets/images/image1.jpg);
+    background-image: url(assets/images/image1.jpg);
     height:245px;
     border-radius: 20px;
 }
