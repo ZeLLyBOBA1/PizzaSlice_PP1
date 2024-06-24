@@ -2,7 +2,7 @@
 Welcome to PizzaSlice, your go-to online destination for ordering the most delicious and fresh pizzas! At PizzaSlice, we believe that every pizza should be a masterpiece, crafted with the finest ingredients and baked to perfection.
 Whether you're a fan of classic Margherita, craving a spicy Pepperoni, or looking to try one of our gourmet specialties, PizzaSlice has something to satisfy every pizza lover's palate. Our commitment to quality and customer satisfaction ensures that you'll always enjoy a mouth-watering meal, delivered hot and fresh to your doorstep.
 
-![Site view across devices](assets\readme-images\mockup-screenshot.png)
+![Site view across devices](assets/readme-images/mockup-screenshot.png)
 
 The PizzaSlice site is live, please [CLICK HERE](https://zellyboba1.github.io/PizzaSlice_PP1/) to check the website.
 
