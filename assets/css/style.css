@@ -1,18 +1,11 @@
-/*
---------------------------------------------|
-Removes margin and padding for every element| ↓↓↓
---------------------------------------------|
-*/
+/*Removes margin and padding for every element */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/*
---------------------------------------------------|
-Removes horizontal scrollbar and add smooth scroll| ↓↓↓
---------------------------------------------------|
-*/
+
+/*Removes horizontal scrollbar and adds smooth scroll*/
 body{
     overflow-x: hidden;
 }
@@ -26,13 +19,9 @@ html{
     width: 0;
 }
 
-/*
-============================================================================|
-Header - Navbar styling                                                     |    
-============================================================================|
-*/
+/*HEADER - NAVBAR styling*/
 
-
+/*Header settings*/
 header{
     position: sticky;
     top: 0px;
@@ -44,6 +33,7 @@ header{
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7);
 }
 
+/*navbar list settings*/
 .nav-bar ul{
     list-style: none;
     display: flex;
@@ -64,29 +54,35 @@ header #nav-container .nav-bar .nav-list{
     align-items: center;
 }
 
+/*changes color for header links and removes underlines*/
 .nav-bar ul a{
     text-decoration: none;
     color:rgb(190, 190, 190);
 }
 
+/*login button styling*/
 #log-in{
     background-color: rgb(190, 190, 190);                                                                                                                                       
     border-radius: 5px; 
 }
 
+/*login button styling on hover*/
 #log-in:hover{
     background-color: rgb(240, 240, 240);
     cursor: pointer;
 }
 
+/*login button text color*/
 #log-in a{
     color: rgb(43, 43, 43);
 }
 
+/*underlines navbar element on hover*/
 header #nav-container .nav-bar .nav-list .text-decoration:hover{
     text-decoration: underline;
 }
 
+/*logo styling*/
 .logo{
     color: rgb(190, 190, 190);
     font-size: 30px;
@@ -96,14 +92,17 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     z-index: 999;
 }
 
+/*styling for icons*/
 #open-icon, #close-icon{
     display: none;
 }
 
+/*hides checkbox*/
 #sidebar-checkbox{
     display: none;
 }
 
+/*scrollwatcher styling for better navigation*/
 #scroll-watcher{
     background-color: rgba(190, 190, 190, 0.5); 
     position:absolute; 
@@ -121,6 +120,7 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     to {scale: 1 1; }
 }
 
+/*media query for better experience*/
 @media(max-width:768px){
     #nav-container{
         position: fixed;
@@ -170,17 +170,9 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     
 }
 
-/*
---------------------------------------------------|
-Popup container settings                          | ↓↓↓
---------------------------------------------------|
-*/
+/*POP UP CONTAINER styling*/
 
-/*
--------------------------
-pop up container settings
--------------------------
-*/
+/*pop up container styling in general*/
 .pop-up-container{
     width: auto;
     background-color: rgb(255, 255, 255); 
@@ -203,12 +195,14 @@ pop up container settings
     top: -60px;
 }
 
+/*pop up container form styling*/
 .pop-up-container form{
     flex-direction: column;
     display: flex;
     gap: 5px;
 }
 
+/*hides checkboxes*/
 #pop-up-checkbox{
     display: none;
 }
@@ -224,11 +218,13 @@ body #pop-up-checkbox:checked ~ header #nav-container{
     display: none;
 }
 
+/*moves popup container to center of the screen*/
 #pop-up-checkbox:checked ~ .pop-up-container{
     top: 50%;
     scale: 1;
 }
 
+/*black blury overlay*/
 #pop-up-checkbox:checked ~ label .overlay{
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
@@ -245,11 +241,6 @@ label .overlay{
     backdrop-filter: blur(0px);
 }
 
-/*
----------------------
-pop up header section
----------------------
-*/
 .pop-up-header-section{
     display: flex; 
     justify-content: space-between; 
@@ -268,12 +259,7 @@ pop up header section
     color: rgba(142, 141, 139, 0.4);
 }
 
-
-/*
---------------------
-pop up email section
---------------------
-*/
+/*email section in pop up*/
 .pop-up-email-section{
     background-color: rgb(248, 242, 242); 
     display: flex; 
@@ -294,11 +280,7 @@ pop up email section
     outline: none;
 }
 
-/*
------------------------
-pop up password section
------------------------
-*/
+/*password section in pop up*/
 .pop-up-password-section{
     background-color: rgb(248, 242, 242); 
     display: flex; 
@@ -319,17 +301,14 @@ pop up password section
     outline: none;
 }
 
-/*
-------------------
-pop up sub section
-------------------
-*/
+/*pop up subsection*/
 .pop-up-sub-section{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/*remember me checkbox styling*/
 #remember-me-span{
     display: flex;
     align-items: center;
@@ -341,22 +320,13 @@ pop up sub section
     font-size: 10px;
 }
 
-/*
----------------------
-submit button section
----------------------
-*/
+/*submit button styling*/
 .submit-button{
     margin-top: 10px;
     border-radius: 5px;
 }
 
-
-/*
-------------------------
-change container section
-------------------------
-*/
+/*changes login to signup*/
 .change-container-section{
     display: flex;
     flex-direction: row;
@@ -385,13 +355,7 @@ change container section
     text-decoration: none;
 }
 
-
-/*
----------------------
-container transitions
----------------------
-*/
-
+/*container transition styling*/
 #register-container{
     left: -50%;
 }
@@ -406,11 +370,7 @@ container transitions
 
 
 
-/*
-============================================================================|
-Hero Section styling                                                        |    
-============================================================================|
-*/
+/*HERO SECTION styling*/
 
 #hero{
     display: flex;
@@ -426,12 +386,14 @@ Hero Section styling                                                        |
     overflow: hidden;
 }
 
+/*hero section container styling*/
 #hero-section-container{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+/*slogan styling*/
 #slogan{
     display: flex; 
     flex-direction: column; 
@@ -462,6 +424,7 @@ Hero Section styling                                                        |
    border-radius: 0px 10px 10px 10px; 
 }
 
+/*hero text container styling*/
 #hero-text-container{
     background-color: rgba(240, 248, 255, 0.1); 
     backdrop-filter: blur(5px); 
@@ -473,6 +436,7 @@ Hero Section styling                                                        |
     font-family: monospace;
 }
 
+/*changes background color, font-size etc. for order now button*/
 #order-now-button{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgba(20, 206, 66, 0.5); 
@@ -489,6 +453,8 @@ Hero Section styling                                                        |
 #typewriter{
     animation: 1s infinite steps(1) blink;
 }
+
+/*typewriter animation*/
 @keyframes blink{
     0%, 100%{
         opacity: 0;
@@ -498,6 +464,7 @@ Hero Section styling                                                        |
     }
 }
 
+/*media query for better experience*/
 @media(max-width:768px){
     #hero{
         display: flex;
@@ -508,11 +475,7 @@ Hero Section styling                                                        |
    
 }
 
-/*
-============================================================================|
-Info Section styling                                                        |    
-============================================================================|
-*/
+/*INFO SECTION styling*/
 
 #info{
     background-color: rgb(60, 60, 60);
@@ -526,6 +489,7 @@ Info Section styling                                                        |
     padding-bottom: 100px;
 }
 
+/*info section parahraphs*/
 #info p{
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -536,6 +500,7 @@ Info Section styling                                                        |
     flex-direction: column;
 }
 
+/*styling for first container in info section*/
 .info-first-section-container{
     width: 300px; 
     height: 240px; 
@@ -551,6 +516,7 @@ Info Section styling                                                        |
     gap: 0px;
 }
 
+/*styling for second container in info section*/
 #info-second-section-container{
     height: 500px; 
     width: 300px; 
@@ -559,6 +525,7 @@ Info Section styling                                                        |
     padding: 20px;
 }
 
+/*image container styling in info section*/
 #info-section-image-container{
     width: 300px; 
     height: 500px; 
@@ -568,7 +535,7 @@ Info Section styling                                                        |
     border-radius: 0px 20px 20px 0px;
 }
 
-
+/*media query for better experience*/
 @media(max-width:950px){
     #info{
         flex-direction: column-reverse;
@@ -669,11 +636,7 @@ Info Section styling                                                        |
     }
 }
 
-/*
-============================================================================|
-Gallery Section styling                                                     |    
-============================================================================|
-*/
+/*MENU SECTION styling*/
 
 #menu{
     background-color: rgb(210, 210, 210); 
@@ -685,6 +648,7 @@ Gallery Section styling                                                     |
     padding-bottom: 100px;
 }
 
+/*Adds custom scrollbar for menu container*/
 #menu-container-main::-webkit-scrollbar{
     width: 20px;
     background-color: transparent;
@@ -704,6 +668,7 @@ Gallery Section styling                                                     |
     border-radius: 10px;
 }
 
+/*Menu container styling*/
 #menu-container{
     background-color: rgb(210, 210, 210); 
     width: 920px; 
@@ -712,6 +677,7 @@ Gallery Section styling                                                     |
     display: flex;
 }
 
+/*sidebar styling in menu section*/
 #menu-container-sidebar{
     background-color: rgb(70, 70, 70); 
     width: 120px; 
@@ -726,6 +692,7 @@ Gallery Section styling                                                     |
     border-color: rgb(60, 60, 60);
 }
 
+/*menu section sidebar links*/
 #menu-links-container{
     position: relative;
     display: flex;
@@ -751,6 +718,7 @@ Gallery Section styling                                                     |
     color: rgb(70, 70, 70);
 }
 
+/*main container in menu section*/
 #menu-container-main{
     display: flex;
     flex-direction: column;
@@ -763,6 +731,7 @@ Gallery Section styling                                                     |
     scroll-behavior: smooth;
 }
 
+/*adds styling for each item container in main container*/
 .menu-item-container{
     background-color: rgb(210, 210, 210);
     width: 350px;
@@ -885,8 +854,7 @@ Gallery Section styling                                                     |
     flex-wrap: wrap;
 }
 
-
-
+/*media query for better experience*/
 @media(max-width:950px){
     #menu-container{
         width: 94%;
@@ -990,11 +958,7 @@ Gallery Section styling                                                     |
     }
 }
 
-/*
-============================================================================|
-Gallery Section styling                                                     |    
-============================================================================|
-*/
+/*GALLERY SECTION styling*/
 
 #gallery{
     background-image: linear-gradient(to bottom, rgb(60,60,60),rgb(30,30,30),rgb(0,0,0)); 
@@ -1006,11 +970,13 @@ Gallery Section styling                                                     |
     padding-bottom: 100px;
 }
 
+/*name of the section*/
 #gallery-header{
     font-size: 40px;
     color: rgb(170, 170, 170);
 }
 
+/*styling for gallery container*/
 #gallery-container{
     width: 920px;
     height: auto;
@@ -1020,6 +986,7 @@ Gallery Section styling                                                     |
     justify-content: space-between;
 }
 
+/*container with two images*/
 .two-image-container{
     background-color: rgba(0, 0, 0, 0); 
     height: 100%; 
@@ -1037,6 +1004,7 @@ Gallery Section styling                                                     |
     width: 100%;
 }
 
+/*adds blur*/
 .blur-div{
     width: 100%;
     height: 100%;
@@ -1047,15 +1015,18 @@ Gallery Section styling                                                     |
     align-items: center;
 }
 
+/*blur on hover*/
 .blur-div:hover{
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/*changes color of the comment*/
 .blur-div:hover  .comment{
     color: rgb(240, 248, 255); 
 }
 
+/*comment styling*/
 .comment{
     padding: 20px;
     color: rgba(240, 248, 255, 0);
@@ -1066,37 +1037,44 @@ Gallery Section styling                                                     |
     border-width: 0 2px 0 2px;
 }
 
+/*gallery container styling*/
 #gallery-container2{
     background-color: rgba(0, 0, 0, 0); 
     height: 100%; 
     width: 300px
 }
 
+/*image1 styling*/
 #image1{
     height:245px;
     border-radius: 20px;
 }
 
+/*image2 styling*/
 #image2{
     height:245px; 
     border-radius: 20px;
 }
 
+/*image3 styling*/
 #image3{
     height: 500px;
     border-radius: 20px;
 }
 
+/*image4 styling*/
 #image4{
     height:245px;
     border-radius: 20px;
 }
 
+/*image5 styling*/
 #image5{
     height:245px;
     border-radius: 20px;
 }
 
+/*media query for better experience*/
 @media(max-width:950px){
     #gallery-container{
         width: 92%;
@@ -1119,31 +1097,10 @@ Gallery Section styling                                                     |
     }
     
 }
-@media(max-width:800){
 
-}
-@media(max-width:700){
-    
-}
-@media(max-width:600){
-    
-}
-@media(max-width:500){
-    
-}
-@media(max-width:400){
-    
-}
-@media(max-width:300){
-    
-}
+/*FOOTER styling*/
 
-/*
-============================================================================|
-Footer styling                                                              |    
-============================================================================|
-*/
-
+/*changes footer color, size etc*/
 footer{
     padding-top: 5px;
     padding-bottom: 5px;
@@ -1158,6 +1115,7 @@ footer{
     align-items: center;
 }
 
+/*media query for better experience*/
 @media(max-width:950px){
     footer{
         gap: 0px;
