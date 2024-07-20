@@ -404,6 +404,10 @@ label .overlay{
     overflow: hidden;
 }
 
+#hero-h2{
+    display: none;
+}
+
 /*hero section container styling*/
 #hero-section-container{
     display: flex;
