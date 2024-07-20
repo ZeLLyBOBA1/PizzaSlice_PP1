@@ -176,6 +176,11 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     #sidebar-checkbox:checked ~ #sidebar-overlay-label{
         display: inline;
     }  
+
+    .nav-bar{
+        display: flex;
+        flex-direction: column;
+    }
     
 }
 
@@ -317,7 +322,7 @@ label .overlay{
     align-items: center;
 }
 
-#pop-up-label{
+.pop-up-label{
     margin-top: 10px;
 }
 
