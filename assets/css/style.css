@@ -33,6 +33,15 @@ header{
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7);
 }
 
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    list-style: none;
+}
+
 /*navbar list settings*/
 .nav-bar ul{
     list-style: none;
@@ -64,6 +73,7 @@ header #nav-container .nav-bar .nav-list{
 #log-in{
     background-color: rgb(190, 190, 190);                                                                                                                                       
     border-radius: 5px; 
+    margin-top: 10px;
 }
 
 /*login button styling on hover*/
@@ -343,7 +353,7 @@ label .overlay{
     font-size: 10px;
 }
 
-#change-container-a{
+.change-container-a{
     display: flex;
     justify-content: center;
     color: grey;
