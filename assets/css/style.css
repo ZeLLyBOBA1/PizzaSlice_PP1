@@ -72,8 +72,7 @@ header #nav-container .nav-bar .nav-list{
 /*login button styling*/
 #log-in{
     background-color: rgb(190, 190, 190);                                                                                                                                       
-    border-radius: 5px; 
-    margin-top: 10px;
+    border-radius: 5px;
 }
 
 /*login button styling on hover*/
@@ -316,6 +315,10 @@ label .overlay{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#pop-up-label{
+    margin-top: 10px;
 }
 
 /*remember me checkbox styling*/
