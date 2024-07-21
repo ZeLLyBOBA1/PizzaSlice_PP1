@@ -187,7 +187,6 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     z-index: 3;
 
     transition: 0.5s;
-    scale: 0;
     top: -60px;
 }
 
@@ -217,7 +216,6 @@ body #pop-up-checkbox:checked ~ header #nav-container{
 /*moves popup container to center of the screen*/
 #pop-up-checkbox:checked ~ .pop-up-container{
     top: 50%;
-    scale: 1;
 }
 
 /*black blury overlay*/
@@ -1039,7 +1037,6 @@ label .overlay{
     padding: 20px;
     color: rgba(240, 248, 255, 0);
     font-size: 20px;
-    text-align: balance;
     transition: 0.5s;
     border-style: solid;
     border-width: 0 2px 0 2px;
