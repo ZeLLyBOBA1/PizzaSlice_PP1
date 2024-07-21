@@ -111,24 +111,6 @@ header #nav-container .nav-bar .nav-list .text-decoration:hover{
     display: none;
 }
 
-/*scrollwatcher styling for better navigation*/
-#scroll-watcher{
-    background-color: rgba(190, 190, 190, 0.5); 
-    position:absolute; 
-    bottom: 0; 
-    left: 0; 
-    height: 2px; 
-    width: 100%;
-    transform-origin: left;
-    scale: 0 1;
-    animation: scroll-watcher linear;
-    animation-timeline: scroll();
-}
-
-@keyframes scroll-watcher{
-    to {scale: 1 1; }
-}
-
 /*media query for better experience*/
 @media(max-width:768px){
     #nav-container{
