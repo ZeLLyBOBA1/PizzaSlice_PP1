@@ -12,11 +12,7 @@ body{
 
 html{
     scroll-behavior: smooth;
-    scroll-padding-top: var(--scroll-padding);
-    
-}
-::-webkit-scrollbar{
-    width: 0;
+    scrollbar-width: none;
 }
 
 /*HEADER - NAVBAR styling*/
